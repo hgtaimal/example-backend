@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "module": "commonjs",
     "target": "es2015",
     "moduleResolution": "node",
@@ -8,19 +9,23 @@
       "es2018",
       "dom"
     ],
-    "sourceMap": false,
+    "sourceMap": true,
     "declaration": false,
     "declarationMap": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "removeComments": false,
     "noImplicitAny": false,
     "skipLibCheck": true,
     "outDir": "./bin",
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "typeRoots": [
       "node_modules/@types"
     ],
     "types": [
-      "node"
+      "node",
+      "reflect-metadata"
     ]
   },
   "exclude": [
@@ -28,6 +33,7 @@
     "typescript"
   ],
   "include": [
-    "**/*"
+    "**/*",
+    "./src/**/*.ts"
   ]
 }
